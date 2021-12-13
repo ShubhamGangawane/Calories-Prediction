@@ -21,3 +21,4 @@
 - The dataset is mostly numeric we have to apply some supervised learning models for prediction.
 - we have to perfrom some eda / preprocessing for feature engineering , handling outliers.
 - applied some visualization techniques for better understanding of the dataset. 
+- we also have to figure out which models performs better.  
