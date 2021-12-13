@@ -16,6 +16,7 @@
 -	|**Calories**	  | Calories burned in kilo calories        |
 -	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 - We have to predict the calories which is continuous value output.
+- The deployment is done via streamlit.
 
 ## Conslusion 👓
 - The dataset is mostly numeric we have to apply some supervised learning models for prediction.
