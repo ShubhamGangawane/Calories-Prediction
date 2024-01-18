@@ -9,7 +9,7 @@ import pandas as pd
 import numpy as np
 import json
 
-
+# Model file
 saved_file = pickle.load(open("G:\\Django\\MLdeploy\\savedmodels\\caloriesprediction.sav","rb"))
 
 # Create your views here.
