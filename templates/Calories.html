@@ -1,0 +1,59 @@
+{% extends 'blog/Base.html' %}
+{% load static %}
+
+
+
+{% block table %}
+<div class="container mt-5">
+    <h1 class="text-center alert alert-dark " style="height: 130%; font-size:130%;">Daily Calorie Intake Calculator</h1>
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        <div class="row text-white">
+            <div class="col-sm-5 ">
+                <label for="height">Height:</label>
+                <input type="text" class="form-control" id="height" name="height" placeholder="Enter your height in (Ft/In)" step="any">
+            </div>
+    
+            <div class="col-sm-5 offset-sm-2 ">
+                <label for="weight">Weight:</label>
+                <input type="text" class="form-control" id="weight" name="weight" placeholder="Enter your weight in (Kgs)">
+            </div>
+            <div class="col-sm-5 mt-5">
+                <label for="age">Age:</label>
+                <input type="text" class="form-control" id="age" name="age" placeholder="Enter your age">
+            </div>
+    
+            <div class="col-sm-5 offset-sm-2 mt-5">
+                <label for="duration">Duration:</label>
+                <input type="text" class="form-control" id="duration" name="duration" placeholder="Enter workout duration">
+            </div>
+    
+            <div class="col-sm-5 mt-5">
+                <label for="heartRate">Heart Rate:</label>
+                <input type="text" class="form-control" id="heartRate" name="heartRate" placeholder="Enter your heart rate">
+            </div>
+    
+            <div class="col-sm-5 offset-sm-2 mt-5">
+                <label for="bodyTemp">Body Temperature:</label>
+                <input type="text" class="form-control" id="bodyTemp" name="bodyTemp" placeholder="Enter your body temperature">
+            </div>
+    
+            <div class="col-sm-5 mt-5">
+                <label>Gender:</label>
+                <select id="cars" name="gender" class="form-control">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Others">Others</option>
+                  </select>
+            </div>
+        </div>
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary mt-5">Predict</button>
+        </div>
+
+    </form>
+
+
+</div>
+{% endblock table %}

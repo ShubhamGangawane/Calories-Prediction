@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <h3>User Data</h3>
+
+    <div class="table table-dark table-hover" id="table1">
+        <table border="1" >
+            <tr class='column'>
+                <td>Sr no.</td>
+                <td>Height</td>
+                <td>Weight</td>
+                <td>Age</td>    
+                <td>Duration</td>    
+                <td>Heart_Rate</td>    
+                <td>Body_Temp</td>
+                <td>Gender</td>    
+
+
+            </tr>
+            {% for i in data %}
+            <tr class='row-data'>
+                <td>{{forloop.counter}}</td>
+                <td>{{i.Height}}</td>
+                <td>{{i.Weight}}</td>
+                <td>{{i.Age}}</td>
+                <td>{{i.Duration}}</td>
+                <td>{{i.Heart}}</td>
+                <td>{{i.Body}}</td>
+                <td>{{i.Gender}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    
+
+    <h3>Prediction</h3>
+    <div class="table table-dark table-striped" id="table2">
+        <table border="1">
+            <tr class='column'>
+                <td>Sr no.</td>
+                <td>Yo Have Burned!!</td>
+            </tr>
+            <tr class='table-primary'>
+                <td>1</td>
+                <td>{{predict}}</td>
+            </tr>
+        </table>
+    </div>
+
+    <p class="text-success mt-5">Your Calories index is in {{result}}</p>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
